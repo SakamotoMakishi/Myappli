@@ -1,0 +1,16 @@
+= render 'products/header'#ヘッダーのビューファイル
+.section
+  .container
+    .header-section
+      %h2.text-middle
+        %i.fas.fa-book
+        CONTENTS
+    .show_book
+      .text-middle
+        %i.fas.fa-dice
+        = @book.title
+    = image_tag "#{@book.image}", alt: "#{@book.title}",class: 'one_image'
+    .one_review
+    %div{style: "text-align: right"}
+      %a{href: "/products/#{@book.id}/reviews/new"}レビューする。
+      / /products/<haml_loud> @product.id </haml_loud>/reviews/new映画idを取得してreviews/nerwに渡している
