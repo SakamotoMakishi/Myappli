@@ -1,0 +1,58 @@
+.show_book{
+  .text-middle{
+    font-size:30px;
+    margin-bottom: 10px;
+    .fas{
+    }
+  }
+}
+.one_image{
+  width: 300px;
+  height: 350px;
+  border-radius: 5px;
+  -moz-box-shadow: rgba(134, 130, 130, 0.2) 0px 0px 10px 10px;
+  box-shadow:rgba(129, 124, 124, 0.7) 0px 0px 30px 30px;
+  box-shadow:rgba(138, 136, 136, 0.37) 0px 10px 30px 10px;
+}
+.new_review{
+  float: right;
+  position: relative;
+  width: 400px;
+  height: 600px;
+  ul{
+  list-style: none;
+  margin-left:30px;
+    li{
+      margin-bottom:20px;
+      height: 30px;
+      padding-top: 10px;
+      .review_area{
+        margin-left: -10px;
+      }
+      .name{
+        font-size:20px;
+      }
+      .oll_field{
+      height: 20px;
+      margin-left: 10px;
+      bottom: -5px;
+      }
+      .rate_field{
+        height: 20px;
+        margin-left: 10px;
+        bottom: -5px;
+      }
+      .review_field{
+        padding-bottom: 90px;
+      }
+      .text_field{
+        width: 250px;
+        height: 200px;
+        position: absolute;
+      }
+      .review_btn{
+        
+      }
+    }
+  }
+}

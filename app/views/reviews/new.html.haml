@@ -11,3 +11,5 @@
         = @book.title
     = image_tag "#{@book.image}", alt: "#{@book.title}",class: 'one_image'
     //products/<haml_loud> @product.id </haml_loud>/reviews/new映画idを取得してreviews/nerwに渡している
+= render 'form'
+= link_to 'Back', reviews_path
