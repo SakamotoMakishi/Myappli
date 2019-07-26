@@ -5,7 +5,7 @@
         %i.fas.fa-book
         ALL CONTENTS
     %ul.book_list
-      - @books.each do |book| #プロダクトテーブルからbookという変数でtitleを取り出している。
+      - @books.each do |book| #booksテーブルからbookという変数でtitleを取り出している。
         %li.col
           = link_to "/products/#{book.id}" do
             .book_image{style:"background-image:url(#{book.image})"}
