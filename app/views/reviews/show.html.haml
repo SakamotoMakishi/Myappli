@@ -1,4 +1,4 @@
-= render 'products/header'#ヘッダーのビューファイル
+= render 'books/header'#ヘッダーのビューファイル
 .section
   .container
     .header-section
@@ -10,13 +10,12 @@
         %i.fas.fa-dice
         = @book.title
     = image_tag "#{@book.image}", alt: "#{@book.title}",class: 'one_image'
-    //products/<haml_loud> @product.id </haml_loud>/reviews/new映画idを取得してreviews/nerwに渡している
     = form_for @review do |f|
-      - if @review.errors.any?
-        #error_explanation
-          %h2= "#{pluralize(@review.errors.count, "error")} prohibited this review from being saved:"
-          %ul
-            - @review.errors.full_messages.each do |message|
+      -# - if @review.errors.any?
+      -#   #error_explanation
+      -#     %h2= "#{pluralize(@review.errors.count, "error")} prohibited this review from being saved:"
+      -#     %ul
+      -#       - @review.errors.full_messages.each do |message|
               %li= message
       %ul.field_list
         %li.field

@@ -7,7 +7,7 @@
     %ul.book_list
       - @books.each do |book| #booksテーブルからbookという変数でtitleを取り出している。
         %li.col
-          = link_to "/reviews/#{book.id}/" do
+          = link_to "/books/#{book.id}/reviews/new" do
             .book_image{style:"background-image:url(#{book.image})"}
           .thumbnail__caption
             %h3.book_title{title: "#{book.title}"}

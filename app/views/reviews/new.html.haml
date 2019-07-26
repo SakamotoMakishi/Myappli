@@ -1,4 +1,4 @@
-= render 'products/header'#ヘッダーのビューファイル
+= render 'books/header'#ヘッダーのビューファイル
 .section
   .container
     .header-section
@@ -10,6 +10,26 @@
         %i.fas.fa-dice
         = @book.title
     = image_tag "#{@book.image}", alt: "#{@book.title}",class: 'one_image'
-    //products/<haml_loud> @product.id </haml_loud>/reviews/new映画idを取得してreviews/nerwに渡している
-= render 'form'
+    = form_for [@book,@review] do |f|
+      -# - if @review.errors.any?
+      -#   #error_explanation
+      -#     %h2= "#{pluralize(@review.errors.count, "error")} prohibited this review from being saved:"
+      -#     %ul
+      -#       - @review.errors.full_messages.each do |message|
+              %li= message
+      %ul.field_list
+        %li.field
+          = f.label :name,'名前',class:'name'
+          = f.text_field :name,class:'oll_field'
+        %li.field
+          .rate_filed
+            = f.label :rate,'評価',class:'name'
+            = f.number_field :rate,class:'rate_field'
+        %li.field
+          .review_area
+            = f.label :review,'レビュー',class:'review_field'
+            = f.text_area :review,class:'text_field'
+        %li.actions
+          .review_btn
+            = f.submit '送信'
 = link_to 'Back', reviews_path
