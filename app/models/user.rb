@@ -4,7 +4,6 @@ class User < ApplicationRecord
   devise  :database_authenticatable, :registerable,
           :recoverable, :rememberable, :validatable
   has_many :books
-  has_many :reviews
   mount_uploader :image, ImageUploader
   validates :email, presence: true
 end

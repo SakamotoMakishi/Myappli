@@ -4,6 +4,14 @@ class BooksController < ApplicationController
     @book = Book.new
   end
 
+  def index
+    @books = Book.order('created_at DESC').limit(40)
+  end
+
+  def show
+    @book = Book.find(params[:id])
+  end
+
   def create
     @book = Book.create(form_params)
     @book.save
