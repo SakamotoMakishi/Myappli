@@ -6,6 +6,8 @@ class BooksController < ApplicationController
 
   def index
     @books = Book.order('created_at DESC').limit(40)
+    book_ids = Book.group(:id).order('count_id DESC').limit(5).count(:id).keys
+    @ranking = book_ids.map { |id| Book.find(id) }
   end
 
   def show
