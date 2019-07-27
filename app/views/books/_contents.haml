@@ -12,3 +12,9 @@
           .thumbnail__caption
             %h3.book_title{title: "#{book.title}"}
               = book.title
+              -if book.reviews.present?
+                %span.rating-star
+                  %i{class: "star-actived rate-#{book.reviews.average(:rate).round}0"}
+              - else
+                %span.rating-star
+                  %i.star-actived.rate-0

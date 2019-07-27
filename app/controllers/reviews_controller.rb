@@ -31,18 +31,16 @@ class ReviewsController < ApplicationController
   # POST /reviews
   # POST /reviews.json
   def create
-    @book = Review.create(review_params)
-    @book.save
+    @review = Review.new(review_params)
     respond_to do |format|
       if @review.save
-        format.html { redirect_to @review, notice: 'Review was successfully created.' }
-        format.json { render :show, status: :created, location: @review }
+        format.html { redirect_to root_path , notice: '投稿完了しました' }
+        format.json { render :index}#, status: :created, location: @review }
       else
         format.html { render :new }
         format.json { render json: @review.errors, status: :unprocessable_entity }
       end
     end
-    redirect_to controller: :books, action: :index
   end
 
   # PATCH/PUT /reviews/1
