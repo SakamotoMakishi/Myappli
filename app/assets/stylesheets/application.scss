@@ -1,8 +1,8 @@
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
-@import'./header.scss';
-@import'./side_bar';
-@import'./books';
-@import'./post.scss';
-@import'./review.scss';
+@import'./header.scss';  //ヘッダーデザイン
+@import'./side_bar';   //サイドリスト
+@import'./books';      //トップページ
+@import'./post.scss';  //投稿画面
+@import'./review.scss';  //レビュー画面
 //@import'./mooovi.scss';
