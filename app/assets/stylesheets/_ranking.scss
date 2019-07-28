@@ -1,0 +1,97 @@
+.ranking_section{
+  position: fixed;
+  width: 250px;
+  top: 55px;
+  left: 1150px;
+  padding: 10px;
+  background-color: rgba(192, 191, 191, 0.747);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 1px 1px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 1px 1px;
+  box-shadow: rgba(168, 167, 167, 0.7) 0px 0px 7px 7px;
+  margin: auto;
+  height: 2000px;
+  .container{
+    .header-section{
+    margin-bottom: 2em;
+    border-bottom: 3px solid #d7dbe2;
+      .text-middle{
+        font-size: 20px;
+        .fas{
+          font-size:20px;
+        }
+      }
+    }
+  }
+  .book_list{
+  padding-top:10px;
+  padding-left: 0;
+  list-style: none;
+  overflow: scroll;
+  height: 700px;
+  margin:10px;
+    .col{
+    margin:auto;
+    margin-left: 50px;
+    margin-bottom: 20%;
+    width: 100px;
+    height: 200px;
+    float: left;
+      .book_image{
+      padding-top: 141.4%;
+      box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1) inset;
+      background-size: cover;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      box-shadow:rgba(228, 226, 226, 0.7) 0px 0px 3px 3px;
+      border-radius: 1em;
+      }
+      .book_image:hover{
+        box-shadow:rgba(245, 244, 244, 0.7) 0px 0px 7px 7px;
+        transition: color .3s;
+      }
+      .thumbnail__caption{
+        .book_title{
+          .rating-star{
+            margin-top:10px;
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            width: auto;
+            line-height: 1;
+            color: rgba(0, 0, 0, 0.1);
+            margin-bottom:10px;
+            .star-actived{
+              position: absolute;
+              top: 0;
+              left: 0;
+              overflow: hidden;
+              width: 0%;
+              color:rgba(248, 184, 8, 0.979);
+              font-style: normal;
+              word-wrap: normal;
+            }
+            .rate-100{width:100%}
+            .rate-90{width:90%}
+            .rate-80{width:80%}
+            .rate-70{width:70%}
+            .rate-60{width:60%}
+            .rate-50{width:50%}
+            .rate-40{width:40%}
+            .rate-30{width:30%}
+            .rate-20{width:20%}
+            .rate-10{width:10%}
+          }
+            .star-actived:before{
+              content: "\2605\2605\2605\2605\2605";
+            }
+          .rating-star:before{
+            content: "\2605\2605\2605\2605\2605";
+          }
+        }
+      }
+    }
+    .book_list:hover{
+      overflow: scroll;
+    }
+  }
+}
