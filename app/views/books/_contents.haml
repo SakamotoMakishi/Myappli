@@ -17,4 +17,10 @@
                   %i{class: "star-actived rate-#{book.reviews.average(:rate).round}0"}
               - else
                 %span.rating-star
-                  %i.star-actived.rate-0
+                  %i.star-actived.rate-
+- if user_signed_in?
+  .post_box
+    %a.fas.fa-edit{href: "books/new"}
+- else
+  .post_box
+    %a.fas.fa-door-open{href: "users/sign_in"}

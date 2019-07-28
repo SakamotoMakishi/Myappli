@@ -1,15 +1,15 @@
 .ranking_section{
-  position: fixed;
-  width: 250px;
-  top: 55px;
-  left: 1150px;
+  position: relative;
+  width: 230px;
+  top: -1230px;
+  left: -580px;
   padding: 10px;
-  background-color: rgba(192, 191, 191, 0.747);
+  background-color: rgba(243, 240, 240, 0.897);
   -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 1px 1px;
   -moz-box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 1px 1px;
   box-shadow: rgba(168, 167, 167, 0.7) 0px 0px 7px 7px;
   margin: auto;
-  height: 2000px;
+  height: 1200px;
   .container{
     .header-section{
     margin-bottom: 2em;
@@ -27,7 +27,7 @@
   padding-left: 0;
   list-style: none;
   overflow: scroll;
-  height: 700px;
+  height: 1100px;
   margin:10px;
     .col{
     margin:auto;
@@ -46,7 +46,7 @@
       border-radius: 1em;
       }
       .book_image:hover{
-        box-shadow:rgba(245, 244, 244, 0.7) 0px 0px 7px 7px;
+        box-shadow:rgba(155, 155, 155, 0.7) 0px 0px 7px 7px;
         transition: color .3s;
       }
       .thumbnail__caption{

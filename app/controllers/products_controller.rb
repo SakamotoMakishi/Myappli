@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
 
   def index
-    @books = Book.order('id ASC').limit(40)
+    @books = Book.order('id ASC').limit(20)
   end
 
   def show

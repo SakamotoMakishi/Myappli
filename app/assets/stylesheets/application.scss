@@ -1,9 +1,11 @@
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
 @import'./header.scss';  //ヘッダーデザイン
+@import'./top_contents'; //トップデザイン
 @import'./side_bar';   //サイドリスト
 @import'./books';      //トップページ
 @import'./ranking';     //ランキング
 @import'./post.scss';  //投稿画面
 @import'./review.scss';  //レビュー画面
+@import'./_footer.scss';  //フッター
 //@import'./mooovi.scss';
