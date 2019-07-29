@@ -1,32 +1,42 @@
-#account-page.account-page
-  .account-page__inner.clearfix
-    .account-page__inner--left.account-page__header
-      %h2 Create Account
-      %h5 新規アカウントの作成
-      = render "devise/shared/links"
-    .account-page__inner--right.user-form
+.login_body
+  = render 'books/header'#ヘッダーのビューファイル
+  = render 'books/top_contents'  #トップ画面の実装
+  .login_setup
+    %h2 Sinup
+    .login_form
       = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
         = devise_error_messages!
-        .field
-          .field-label
-            = f.label :name
-          .field-input
-            = f.text_field :name, autofocus: true
-        .field
-          .field-label
+        .label
+          .label__li
             = f.label :email
-          .field-input
-            = f.email_field :email
-        .field
-          .field-label
+          .label__li
+            = f.email_field :email, autofocus: true, placeholder: 'メールアドレスを入力'
+        .label
+          .label__li
             = f.label :password
-            %i (英数字8文字以上)
-          .field-input
-            = f.password_field :password, autocomplete: "off"
-        .field
-          .field-label
+          - if @validatable
+            %i
+              (#{@minimum_password_length} characters minimum)
+          .label__li
+            = f.password_field :password, autocomplete: "off", placeholder: 'パスワードを入力'
+        .label
+          .label__li
             = f.label :password_confirmation
-          .field-input
-            = f.password_field :password_confirmation, autocomplete: "off"
-        .actions
-          = f.submit "Create Account", class: 'btn'
+          .label__li
+            = f.password_field :password_confirmation, autocomplete: "off", placeholder: 'パスワードを入力（確認）'
+        .label
+          .label__li
+            = f.label :name
+          .label__name
+            = f.text_field :name, placeholder: 'ニックネームを入力(必須)'
+        .field
+          = f.label :アバター画像
+          .label__ava
+            = f.file_field :avatar
+        .submit
+          = f.submit
+        .link_box_sin
+          .link_box_sin__links
+            %strong すでにアカウントを持っていますか？
+          .link_box_sin__link
+            = render "devise/shared/links"

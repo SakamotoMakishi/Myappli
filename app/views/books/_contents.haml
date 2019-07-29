@@ -7,8 +7,12 @@
     %ul.book_list
       - @books.each do |book| #booksテーブルからbookという変数でtitleを取り出している。
         %li.col
-          = link_to "/books/#{book.id}/reviews/new" do
-            .book_image{style:"background-image:url(#{book.image})"}
+          - if user_signed_in?
+            = link_to "/books/#{book.id}/reviews/new" do
+              .book_image{style:"background-image:url(#{book.image})"}
+          - else
+            = link_to root_path do
+              .book_image{style:"background-image:url(#{book.image})"}
           .thumbnail__caption
             %h3.book_title{title: "#{book.title}"}
               = book.title
@@ -22,5 +26,8 @@
   .post_box
     %a.fas.fa-edit{href: "books/new"}
 - else
+  .login
+    %h1.login__pop  Login & Sinup
+    %i.far.fa-arrow-alt-circle-right.faa-passing.animated
   .post_box
     %a.fas.fa-door-open{href: "users/sign_in"}
