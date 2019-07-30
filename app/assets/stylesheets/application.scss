@@ -6,10 +6,11 @@
 @import'./side_bar.scss';   //サイドリスト
 @import'./books.scss';      //トップページ
 @import'./ranking.scss';     //ランキング
-@import'./mypage.scss';   //マイページ
+@import'./mypage.scss';   //サイドマイページ
 @import'./post.scss';  //投稿画面
 @import'./review.scss';  //レビュー画面
 @import'./footer.scss';  //フッター
 @import'./login.scss' ;  // ログイン画面
-@import'./sinup.scss';  //新規登録画面
+@import'./signup.scss';  //新規登録画面
+@import'./user_show.scss'; //ユーザーページ
 //@import'./mooovi.scss';

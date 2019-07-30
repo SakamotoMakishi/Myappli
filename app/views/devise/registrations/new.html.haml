@@ -2,7 +2,7 @@
   = render 'books/header'#ヘッダーのビューファイル
   = render 'books/top_contents'  #トップ画面の実装
   .login_setup
-    %h2 Sinup
+    %h2 Signup
     .login_form
       = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
         = devise_error_messages!

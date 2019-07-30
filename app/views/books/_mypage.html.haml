@@ -10,17 +10,14 @@
         週間読書数
         .book_week
           = "#{@book_week}"
-        冊
       %li.list5
         月間読書数
-        .book_month
+        .book_week
           = "#{@book_month}"
-        冊
       %li.list2
-        合計登録数
-        .total
+        合計読書数
+        .book_week
           = "#{@total}"
-        冊
       %li.list3
         - @last_book.each do |book|
           最近の投稿
