@@ -24,8 +24,11 @@
               = link_to "Logout", destroy_user_session_path, method: :delete, class: "btn"
         - else
           %li
-            %i.fas.fa-door-open
+            %i.fas.fa-dice
+              = link_to 'TopPage','/',class: "btn"
+          %li
+            %i.fas.fa-users-cog
               = link_to 'Login',new_user_session_path,class: "btn"
           %li
-            %i.fas.fa-door-open
+            %i.fas.fa-users-cog
               = link_to 'Sinup',new_user_registration_path,class: "btn"

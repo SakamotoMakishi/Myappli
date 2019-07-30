@@ -3,28 +3,28 @@ html{
   height: 100vw;
   //background-image:url(https://cdn.pixabay.com/photo/2016/11/21/14/12/books-1845614_1280.jpg);
   //background-size:cover;
-  background-color: rgba(236, 236, 235, 0.829);
+  background-color: rgba(240, 240, 240, 0.829);
   font-family:Comic Sans MS;
   body{
     padding: 0;
     margin: 0;
     .top_page{
-      height: 1750px;
+      height: 1850px;
       .contents_section{
-        width: 750px;
+        width: 820px;
         position: relative;
-        top: 10px;
-        padding: 20px;
+        top: 30px;
+        padding: 10px;
         background-color: rgba(240, 239, 239, 0.952);
         -webkit-box-shadow: rgba(156, 155, 155, 0.2) 0px 0px 1px 1px;
         -moz-box-shadow: rgba(216, 215, 215, 0.2) 0px 0px 1px 1px;
-        box-shadow: rgba(170, 170, 168, 0.856) 0px 0px 7px 7px;
+        box-shadow: rgba(196, 196, 194, 0.856) 0px 0px 5px 5px;
         margin: auto;
-        height: 1200px;
+        height: 1300px;
         border-radius: 5px;
         .container{
           top:10px;
-          height: 1000px;
+          height: 1200px;
           .header-section{
             margin-top: -9px;
             border-bottom: 3px solid #d7dbe2;
@@ -42,14 +42,14 @@ html{
         padding-top: 20px;
         list-style: none;
         overflow: scroll;
-        height: 1100px;
+        height: 1150px;
         margin: 13px;
           .col{
           margin:auto;
-          margin-left: 60px;
-          margin-bottom: 13%;
-          width: 100px;
-          height: 200px;
+          margin-left: 30px;
+          margin-bottom: 100px;
+          width: 150px;
+          height: 250px;
           float: left;
             .book_image{
             padding-top: 141.4%;
@@ -67,7 +67,7 @@ html{
             .thumbnail__caption{
               .book_title{
                 .rating-star{
-                  margin-top:10px;
+                  margin-top:30px;
                   position: relative;
                   display: inline-block;
                   vertical-align: middle;

@@ -10,7 +10,7 @@
           %ul.contents_list
             - if user_signed_in?
               %li
-                %i.fas.fa-dice
+                %i.fas.fa-book
                   = link_to 'TopPage','/',class: "btn"
               %li
                 %i.fas.fa-address-card
@@ -26,11 +26,15 @@
                   = link_to "Logout", destroy_user_session_path, method: :delete, class: "btn"
             - else
               %li
-                %i.fas.fa-door-open
+                %i.fas.fa-book
+                  = link_to 'TopPage','/',class: "btn"
+              %li
+                %i.fas.fa-users-cog
                   = link_to 'Login',new_user_session_path,class: "btn"
               %li
-                %i.fas.fa-door-open
+                %i.fas.fa-users-cog
                   = link_to 'Sinup',new_user_registration_path,class: "btn"
+
   #js-hamburger.hamburger
     %span.hamburger__line.hamburger__line--1
     %span.hamburger__line.hamburger__line--2

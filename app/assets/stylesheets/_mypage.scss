@@ -1,16 +1,56 @@
 .mypage{
-  width: 200px;
+  width: 300px;
+  height: 900px;
   float: right;
   position: relative;
-  bottom: 1170px;
-  right: 45px;
-  position: relative;
+  bottom: 1291px;
+  right: -15px;
+  -webkit-box-shadow: rgba(156, 155, 155, 0.2) 0px 0px 1px 1px;
+  -moz-box-shadow: rgba(216, 215, 215, 0.2) 0px 0px 1px 1px;
+  box-shadow: rgba(177, 171, 157, 0.856) 0px 0px 2px 2px;
   &__image{
-    height: 200px;
-    width: 200px;
+    height: 180px;
+    width: 180px;
     border-radius: 50%;
+    position: relative;
+    top: 20px;
+    right: -45px;
+    -webkit-box-shadow: rgba(156, 155, 155, 0.2) 0px 0px 1px 1px;
+    -moz-box-shadow: rgba(216, 215, 215, 0.2) 0px 0px 1px 1px;
+    box-shadow: rgba(219, 199, 134, 0.856) 0px 0px 3px 3px;
   }
   &__name{
+    position: relative;
+    left: -5px;
+    top: 30px;
     text-align: center;
+  }
+  .mypage_list{
+    list-style:none;
+    li{
+      margin-top:30px;
+    }
+    .list1{
+      padding-top:30px;
+    }
+    .list2{
+    }
+    .list3{
+      .book_title{
+        padding-top: 10px;
+        font-size: 20px;
+      }
+      .book_image{
+      margin-top:20px;
+      -webkit-box-shadow: rgba(156, 155, 155, 0.2) 0px 0px 1px 1px;
+      -moz-box-shadow: rgba(216, 215, 215, 0.2) 0px 0px 1px 1px;
+      box-shadow: rgba(219, 199, 134, 0.856) 0px 0px 3px 3px;
+      background-size: cover;
+      width: 150px;
+      height: 200px;
+      background-position: 50% 50%;
+      border-radius: 5px;
+      }
+    }
   }
 }

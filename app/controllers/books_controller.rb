@@ -7,8 +7,15 @@ class BooksController < ApplicationController
   def index
     @books = Book.order('created_at DESC').limit(40)
     @ranking = Book.find(Review.group(:book_id).order('count(book_id) desc').limit(7).pluck(:Book_id))
-    # book_ids = Book.group(:id).order('count_id DESC').limit(5).count(:id).keys
-    # @ranking = book_ids.map { |id| Book.find(id) }
+    if user_signed_in?
+      @total = current_user.books.all.count
+      @last_book = current_user.books.last(1)
+      book_week = current_user.books.group("MINUTE(created_at)").group("SECOND(created_at)").count
+      book_month = current_user.books.group("HOUR(created_at)").group("MINUTE(created_at)").count
+      @book_week = book_week.values.count
+      @book_month = book_month.values.count
+      #binding.pry
+    end
   end
 
   def show
