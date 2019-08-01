@@ -1,35 +1,55 @@
 = render 'books/header'#ヘッダーのビューファイル
-.contents_section
-  .container
-    .header-section
-      %h2.text-middle
-        %i.fas.fa-book
-        CONTENTS
-    .show_book
-      .text-middle
-        %i.fas.fa-dice
-        = @book.title
-    = image_tag "#{@book.image}", alt: "#{@book.title}",class: 'one_image'
-    = form_for [@book,@review] do |f|
-      -# - if @review.errors.any?
-      -#   #error_explanation
-      -#     %h2= "#{pluralize(@review.errors.count, "error")} prohibited this review from being saved:"
-      -#     %ul
-      -#       - @review.errors.full_messages.each do |message|
-              %li= message
-      %ul.field_list
-        %li.field
-          = f.label :name,'名前',class:'name'
-          = f.text_field :name,class:'oll_field'
-        %li.field
-          .rate_filed
-            = f.label :rate,'評価',class:'name'
-            = f.number_field :rate, placeholder: '評価', value: 1, max: 10, min: 1, class:'rate_field'
-        %li.field
-          .review_area
-            = f.label :review,'レビュー',class:'review_field'
-            = f.text_area :review,class:'text_field'
-        %li.actions
-          .review_btn
-            = f.submit '送信'
-= link_to 'Back', reviews_path
+.review_page
+  .contents_section
+    .container
+      .header-section1
+        %h2.text-middle
+          %i.fas.fa-book
+          Book Rview
+      .show_book
+        .text-middle
+          %i.fas.fa-book
+          .book_title
+            = @book.title
+        = image_tag "#{@book.image}",class: 'one_image'
+      .text_review
+        .header-section2
+          revew
+        .revuew_text
+          = @book.review
+      .user_review
+        .header-section2
+          revew
+      .review_form_area
+        = form_for [@book,@review] do |f|
+          -# - if @review.errors.any?
+          -#   #error_explanation
+          -#     %h2= "#{pluralize(@review.errors.count, "error")} prohibited this review from being saved:"
+          -#     %ul
+          -#       - @review.errors.full_messages.each do |message|
+                  %li= message
+          %ul.field_list
+            %li.field
+              .rate_filed
+                = f.label :rate,'評価',class:'name'
+                = f.number_field :rate, placeholder: '評価', value: 1, max: 10, min: 1, class:'rate_field'
+            %li.field
+              .review_area
+                = f.text_area :review,class:'text_field'
+            %li.actions
+              .review_btn
+                = f.submit '投稿', class: 'submit'
+      .users_review
+        .header-section2
+          Users_Review
+      .user_oll_revew
+        - @book.reviews.each do |review|
+          %ul.review_list
+            %li.image
+              = image_tag review.user.avatar,class:"i_image"
+            %li.name
+              = review.user.name
+            %li.review
+              = review.review
+            /%li.rate
+            /= review.rate

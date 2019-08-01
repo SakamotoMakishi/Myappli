@@ -31,11 +31,11 @@
       .header-section
         %h2.text-middle
           %i.fas.fa-book
-          MY CONTENTS
+          MY BOOKS
       %ul.book_list
         - @book.each do |book| #プロダクトテーブルからbookという変数でtitleを取り出している。
           %li.col
-            = link_to "/books/#{book.id}" do
+            = link_to "/books/#{book.id}/reviews/new" do
               .book_image{style:"background-image:url(#{book.image})"}
             .thumbnail__caption
               %h3.book_title{title: "#{book.title}"}

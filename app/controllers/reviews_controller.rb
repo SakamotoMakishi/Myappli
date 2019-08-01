@@ -18,8 +18,9 @@ class ReviewsController < ApplicationController
 
   # GET /reviews/new
   def new
-    @book = Book.find(params[:book_id])
     @review = Review.new
+    @book = Book.find(params[:book_id])
+    #binding.pry
     #@books = Book.find(params[:id])
     #@reviews = Review.all
   end
@@ -31,7 +32,7 @@ class ReviewsController < ApplicationController
   # POST /reviews
   # POST /reviews.json
   def create
-    @review = Review.new(review_params)
+    @review = Review.create(review_params)
     respond_to do |format|
       if @review.save
         format.html { redirect_to root_path , notice: '投稿完了しました' }
@@ -75,6 +76,6 @@ class ReviewsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def review_params
-      params.require(:review).permit(:name, :rate, :review).merge(book_id: params[:book_id])
+      params.require(:review).permit(:name, :rate, :review).merge(book_id: params[:book_id], user_id: current_user.id)
     end
 end
