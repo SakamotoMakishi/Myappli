@@ -1,14 +1,15 @@
-.form{
-  width:50%;
-  height: 550px;
-  margin: auto;
-  margin-top:70px;
-  -webkit-box-shadow: rgba(226, 225, 225, 0.2) 0px 0px 1px 1px;
-  -moz-box-shadow: rgba(216, 214, 214, 0.2) 0px 0px 1px 1px;
-  background-color: rgba(245, 245, 245, 0.986);
-  border-radius: 5px;
-  font-family: 'arial unicode ms';
-  .message-box{
+.form_page{
+  .form{
+    width:50%;
+    height: 550px;
+    margin: auto;
+    margin-top:70px;
+    -webkit-box-shadow: rgba(226, 225, 225, 0.2) 0px 0px 1px 1px;
+    -moz-box-shadow: rgba(216, 214, 214, 0.2) 0px 0px 1px 1px;
+    background-color: rgba(245, 245, 245, 0.986);
+    border-radius: 5px;
+    font-family: 'arial unicode ms';
+    .message-box{
     height: 500px;
     width: 500px;
     .form_box{
@@ -56,6 +57,7 @@
         left:300px;
         top:-10px;
       }
+    }
     }
   }
 }

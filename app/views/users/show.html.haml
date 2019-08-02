@@ -33,7 +33,7 @@
           %i.fas.fa-book
           MY BOOKS
       %ul.book_list
-        - @book.each do |book| #プロダクトテーブルからbookという変数でtitleを取り出している。
+        - @book.reverse_each do |book| #プロダクトテーブルからbookという変数でtitleを取り出している。
           %li.col
             = link_to "/books/#{book.id}/reviews/new" do
               .book_image{style:"background-image:url(#{book.image})"}

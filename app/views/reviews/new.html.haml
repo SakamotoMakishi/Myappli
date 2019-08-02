@@ -5,29 +5,29 @@
       .header-section1
         %h2.text-middle
           %i.fas.fa-book
-          Book Rview
+          Book Review
       .show_book
         .text-middle
           %i.fas.fa-book
           .book_title
             = @book.title
         = image_tag "#{@book.image}",class: 'one_image'
+      .user_avatar
+        = image_tag @book.user.avatar,class:"user_avatar__image"
+        .user_avatar__name
+          = @book.user.name
+        .user_avatar__text
+          投稿者
       .text_review
         .header-section2
-          revew
+          text
         .revuew_text
           = @book.review
       .user_review
         .header-section2
-          revew
+          form
       .review_form_area
         = form_for [@book,@review] do |f|
-          -# - if @review.errors.any?
-          -#   #error_explanation
-          -#     %h2= "#{pluralize(@review.errors.count, "error")} prohibited this review from being saved:"
-          -#     %ul
-          -#       - @review.errors.full_messages.each do |message|
-                  %li= message
           %ul.field_list
             %li.field
               .rate_filed
@@ -41,15 +41,20 @@
                 = f.submit '投稿', class: 'submit'
       .users_review
         .header-section2
-          Users_Review
+          Review
       .user_oll_revew
-        - @book.reviews.each do |review|
+        - @book.reviews.reverse_each do |review|
           %ul.review_list
-            %li.image
+            %li.image_area
               = image_tag review.user.avatar,class:"i_image"
-            %li.name
+            %li.name_area
+              -if review.rate.present?
+                %span.rating-star
+                  %i{class: "star-actived rate-#{review.rate}0"}
+              - else
+                %span.rating-star
+                  %i.star-actived.rate-
+            %li.rate_area
               = review.user.name
-            %li.review
+            %li.review_area
               = review.review
-            /%li.rate
-            /= review.rate

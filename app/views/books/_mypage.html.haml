@@ -5,7 +5,7 @@
       %h2= current_user.name
     %ul.mypage_list
       %li.list1
-        = link_to 'Mypage',root_path
+        = link_to 'Mypage',"/users/#{current_user.id}"
       %li.list4
         週間読書数
         .book_week

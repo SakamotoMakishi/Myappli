@@ -63,7 +63,7 @@ html{
             border-radius: 1em;
             }
             .book_image:hover{
-              box-shadow:rgba(199, 197, 197, 0.7) 0px 0px 7px 7px;
+              box-shadow:rgba(126, 125, 125, 0.7) 0px 0px 7px 7px;
               transition: color .3s;
             }
             .thumbnail__caption{
@@ -143,13 +143,13 @@ html{
           font-size:50px;
           left: -315px;
           width: 400px;
-          bottom: 35px;
+          bottom: 60px;
         }
         .far{
           font-size: 40px;
           position: relative;
           left: 50px;
-          bottom: 115px;
+          bottom: 140px;
           color: rgba(243, 189, 73, 0.952);
         }
       }
