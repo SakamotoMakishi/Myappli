@@ -43,6 +43,7 @@
         .header-section2
           Review
       .user_oll_revew
+      
         - @book.reviews.reverse_each do |review|
           %ul.review_list
             %li.image_area
